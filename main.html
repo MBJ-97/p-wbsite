@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">    
+
+    <title>Mahdi BELDJOUDI</title>
+</head>
+<body class="bg-primary mx-4 sm:mx-20 font-epilogue">
+    <div id="app">
+        <header class="mt-2 sm:flex sm:justify-between sm:items-center mb-20">
+            <div class="flex items-center justify-between px-4 sm:px-0 py-3 md:w-1/3">
+                <div class=" mx-auto sm:ml-0 font-bold text-lg">
+                    <p>Beldjoudi Mahdi</p>
+                </div>
+                <div class="sm:hidden">
+                    <button @click="isOpen = !isOpen" type="button" class="block">
+                        <i v-if="!isOpen" class="fas fa-bars fa-2x"></i>
+                        <i v-if="isOpen" class="fas fa-times fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+            <div :class="isOpen ? 'block' : 'hidden' " class="py-3 sm:flex sm:items-center sm:mt-4 sm:w-1/3 mr-0">
+                <div class="mx-auto sm:mr-0 text-center sm:flex">
+                    <a href="#formation" class="hover:text-secondary pb-2 block" href="">Formation</a>
+                    <a href="#experience" class="hover:text-secondary mt-1 pb-2 block sm:mt-0 sm:ml-4" href="">Expérience</a>
+                    <a href="#competances" class="hover:text-secondary mt-1 pb-2 block sm:mt-0 sm:ml-4" href="">Compétances</a>
+                    <a href="#git" class="hover:text-secondary mt-1 pb-2 block sm:mt-0 sm:ml-4" href="">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="intro sm:flex items-center px-6"> <!--Intro-->
+            <div class="font-bold text-3xl max-w-2xl mx-auto order-2 sm:order-1 mb-8 sm:mb-0">
+                <p>Hello ! C’est <span class="text-secondary underline">Mahdi</span> développeur web, digital freak et  étudiant en L3 Management général à l’ESAA.</p>
+            </div>
+
+            <div class="max-w-md mx-auto order-1 sm:order-2">
+                <img src="/dist/images/mahdi.png" alt="Mahdi">
+            </div>
+        </div>
+
+
+    <p class="mt-12 mb-32 sm:mb-40 text-center animate-bounce ease duration-300">Scroll <span><i class="ml-2 fas fa-arrow-down fa-2x"></i></span></p>
+
+    <div id="formation" class="formation mb-32"> <!--formation-->
+        <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Formation</h1>
+
+        <div class="sm:flex px-6">
+
+            <div class="order-2 sm:order-2  w-full sm:w-1/3">
+                <img src="/dist/images/formation.svg" alt="formation">
+            </div>
+
+            <div class="sm:order-1 w-full sm:w-2/3">
+                <div>
+                    <div id="partone" class="project1 md:flex items-end mb-16 blk hna">
+                        <span class="font-bold text-5xl mr-4">2016 </span> <p>* Obtention d'un BAC sientifique avec mention bien. <br> * J’ai intégré l’USTHB dans un programme en Sciences et technologies. </p>
+                    </div>
+                    <div class="md:flex items-start mb-16">
+                        <span class="font-bold text-5xl mr-4">2018</span> <p>* Je me suis autoformé en développement web et écrit mes premières lignes de code !</p>
+                    </div>
+                    <div class="md:flex items-end mb-16">
+                        <span class="font-bold text-5xl mr-4">2020</span> <p>* J’ai obtenu une licence en génie mécanique option sciences des matériaux. <br>* J’ai obtenu un certificat en DESIGN THINKING effectué sur interaction design foundation.</p>
+                    </div>
+                    <div class="md:flex items-end">
+                        <span class="font-bold text-5xl mr-4">2021</span> <p>* 2021 une année pleine de motivation, j’ai effectué le “Facebook digital marketing certificate” en partenariat avec coursera.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <div id="experience" class="competances mb-32">
+        <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Expérience</h1>
+
+        <div class="sm:flex px-6">
+            <div class="w-full sm:w-1/3">
+                <img src="/dist/images/work.svg" alt="">
+            </div>
+            <div class="w-full sm:w-2/3">
+                <h2 class="text-5xl font-bold mb-6"> Développeur web</h2>
+                <span class="text-lg">@CasbahTech, Juillet 2019 à Octobre 2019 ( stagiaire )</span>
+
+                <p class="mt-10 mb-24">J’ai rejoint CasbahTech pour un stage en développement web où j’avais pour mission de réaliser une 
+                    application mobile avec un outil NOCODE pour BNP Paribas et aussi de briefer mes superieurs et 
+                    les responsables de BNP Paribas des avancements du projet et d’etre à leur écout et de m’adapter a leurs besoins.
+                </p>
+
+                <h2 class="text-5xl font-bold mb-6">Organisateur d’événements</h2>
+                <span class="text-lg">@Scouts musulmans algériens & Croissant rouge algérien</span>
+
+                <p class="mt-10">
+                    J’ai organisé à plusieur reprises des sorties au profit des enfants malade de l’hopital Parnet avec le groupe des SMA 
+                    où j’etais responsable de gérer toutes les équipes ( enumération des enfants et de leurs envies, achat des jouets, emballages de ces derniers ... ) ainsi qu’une 
+                    sortie en 2018 pour le profit des enfants orphelins avec le croissant rouge algérien en coordination avec une association caritative de l’USTHB.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="competances" class="competances mb-32">
+        <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Compétances</h1>
+
+        <div class="sm:flex text-center sm:text-left">
+            <div class="w-full sm:w-1/3 mb-8 sm:mb-0">
+                <h3 class="underline text-xl">Hard skills</h3>
+                <ul class="px-8 mt-6">
+                    <li>* Facebook ads</li>
+                    <li>* HTML, CSS, PHP, JS</li>
+                    <li>* Agile methodology</li>
+                    <li>* Design thinking</li>
+                </ul>
+            </div>
+            <div class="w-full sm:w-1/3 mb-8 sm:mb-0">
+                <h3 class="underline text-xl">Soft skills</h3>
+                <ul class="px-8 mt-6">
+                    <li>* Empathie</li>
+                    <li>* Continuous learner</li>
+                    <li>* Créatif</li>
+                    <li>* Team player</li>
+                    <li>* Débrouillard</li>
+                </ul>
+            </div>
+            <div class="w-full sm:w-1/3">
+                <h3 class="underline text-xl">Compétances linguistiques</h3>
+                <ul class="px-8 mt-6">
+                    <li>* Arabe : Parlé, lu, écrit.</li>
+                    <li>* Français : Parlé, lu, écrit.</li>
+                    <li>* Anglais : Parlé, lu, écrit.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="git" class="getintouch mb-32">
+        
+        <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Contact</h1>
+
+        <div class="sm:flex px-6 items-top">
+            <div class="pb-8 w-full sm:w-1/3 order-1 sm:order-1">
+                <img src="/dist/images/git2.svg" alt="">
+            </div>
+            <div class="w-full sm:w-2/3 sm:order-2">
+                <p class="font-semibold text-2xl mb-6 mt-8 sm:mt-0">Mon profile vous intéresse ? Lets get in touch !</p>
+
+                <div class="sm:flex mx-auto w-full">
+                        <a href="mailto:mehdiibeldjoudi@gmail.com"> <button class="cursor-pointer mb-8 sm:mb-0 w-48 py-4 bg-secondary rounded-lg font-semibold mr-4">Email me</button> </a>
+                        <a href="/dist/cv.pdf" download> <button class="cursor-pointer w-48 py-4 bg-white rounded-lg font-semibold">Téléchargez mon cv</button> </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<!--VueJS-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="dist/js/vue.js"></script>
+</body>
+
+</html>
