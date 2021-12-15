@@ -37,13 +37,13 @@
                     <p>Beldjoudi Mahdi</p>
                 </div>
                 <div class="sm:hidden">
-                    <button @click="isOpen = !isOpen" type="button" class="block">
+                    <button @click="isOpen = !isOpen" type="button" class="outline-none">
                         <i v-if="!isOpen" class="fas fa-bars fa-2x"></i>
                         <i v-if="isOpen" class="fas fa-times fa-2x"></i>
                     </button>
                 </div>
             </div>
-            <div :class="isOpen ? 'block' : 'hidden' " class="py-3 sm:flex sm:items-center sm:mt-4 sm:w-1/3 mr-0">
+            <div :class="!isOpen ? 'hidden transition ease-out delay-500' : 'block' " class="py-3 sm:flex sm:items-center sm:mt-4 sm:w-1/3 mr-0">
                 <div class="mx-auto sm:mr-0 text-center sm:flex">
                     <a href="#formation" class="hover:text-secondary pb-2 block" href="">Formation</a>
                     <a href="#experience" class="hover:text-secondary mt-1 pb-2 block sm:mt-0 sm:ml-4" href="">Expérience</a>
@@ -54,8 +54,8 @@
         </header>
 
         <div class="intro sm:flex items-center px-6"> <!--Intro-->
-            <div class="font-bold text-3xl max-w-2xl mx-auto order-2 sm:order-1 mb-8 sm:mb-0">
-                <p>Hello ! C’est <span class="text-secondary underline">Mahdi</span> développeur web, digital freak et  étudiant en L3 Management général à l’ESAA.</p>
+            <div class="font-bold text-4xl max-w-2xl mx-auto order-2 sm:order-1 mb-8 sm:mb-0">
+                <p class="leading-snug sm:leading-normal">Hello ! C’est <span class="text-secondary p-1 rounded bg-white border border-secondary">Mahdi</span> , développeur web, digital freak et  étudiant en M1 Marketing du distributeur international à l’ESAA.</p>
             </div>
 
             <div class="max-w-md mx-auto order-1 sm:order-2">
@@ -103,21 +103,37 @@
                 <img src="/dist/images/work.svg" alt="">
             </div>
             <div class="w-full sm:w-2/3">
-                <h2 class="text-5xl font-bold mb-6"> Développeur web</h2>
-                <span class="text-lg">@CasbahTech, Juillet 2019 à Octobre 2019 ( stagiaire )</span>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6"> Développeur web</h2>
+                <span class="text-lg">@CasbahTech, Juillet 2019 à Octobre 2019 ( stage )</span>
 
                 <p class="mt-10 mb-24">J’ai rejoint CasbahTech pour un stage en développement web où j’avais pour mission de réaliser une 
                     application mobile avec un outil NOCODE pour BNP Paribas et aussi de briefer mes superieurs et 
                     les responsables de BNP Paribas des avancements du projet et d’etre à leur écout et de m’adapter a leurs besoins.
                 </p>
 
-                <h2 class="text-5xl font-bold mb-6">Organisateur d’événements</h2>
-                <span class="text-lg">@Scouts musulmans algériens & Croissant rouge algérien</span>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6">Organisateur d’événements</h2>
+                <span class="text-lg">@Scouts musulmans algériens & Croissant rouge algérien, depuis 2013</span>
 
-                <p class="mt-10">
+                <p class="mt-10 mb-24">
                     J’ai organisé à plusieur reprises des sorties au profit des enfants malade de l’hopital Parnet avec le groupe des SMA 
                     où j’etais responsable de gérer toutes les équipes ( enumération des enfants et de leurs envies, achat des jouets, emballages de ces derniers ... ) ainsi qu’une 
-                    sortie en 2018 pour le profit des enfants orphelins avec le croissant rouge algérien en coordination avec une association caritative de l’USTHB.
+                    sortie en 2018 pour le profit des enfants orphelins avec le croissant rouge algérien en coordination avec une association caritative de l’USTHB. 
+                </p>
+
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6">Digital marketing</h2>
+                <span class="text-lg">@Bourse d'Alger, de mai à juillet 2021 ( stage )</span>
+
+                <p class="mt-10 mb-24">
+                    J'ai pu faire un audit de la présence de la Bourse d'Alger sur les réseaux sociaux, j'ai pu faire des propositions de startégies
+                    de contenu sur leur differents reseaux sociaux et de campagnes paid advertising.
+                </p>
+
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6">Customer acquisition manager</h2>
+                <span class="text-lg">@Skyeng, Septembre 2021 ( remote )</span>
+
+                <p class="mt-10">
+                    J'ai eu la chance de faire l'expérience du travail en full remote avec Skyeng, une Edtech russe qui a pénétré le marché
+                   français. J'ai été responsable de contacter les warm leads pour les inscrire sur le CRM à des séances gratuites sur la plateforme.
                 </p>
             </div>
         </div>
@@ -126,38 +142,38 @@
     <div id="competances" class="competances mb-32">
         <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Compétances</h1>
 
-        <div class="sm:flex text-center sm:text-left">
-            <div class="w-full sm:w-1/3 mb-8 sm:mb-0">
-                <h3 class="underline text-xl">Hard skills</h3>
+        <div class="overflow-x-auto sm:flex gap-4 text-center sm:text-left">
+            <div class="w-full sm:w-1/3 mb-8 sm:mb-0 bg-white px-6 py-10 rounded-lg border-2 border-secondary">
+                <h3 class="underline text-xl text-center">Hard skills</h3>
                 <ul class="px-8 mt-6">
-                    <li>* Facebook ads</li>
-                    <li>* HTML, CSS, PHP, JS</li>
-                    <li>* Agile methodology</li>
-                    <li>* Design thinking</li>
+                    <li>Facebook ads</li>
+                    <li>HTML, CSS, PHP, JS</li>
+                    <li>Agile methodology</li>
+                    <li>Design thinking</li>
                 </ul>
             </div>
-            <div class="w-full sm:w-1/3 mb-8 sm:mb-0">
-                <h3 class="underline text-xl">Soft skills</h3>
+            <div class="w-full sm:w-1/3 mb-8 sm:mb-0 bg-white px-6 py-10 rounded-lg border-2 border-secondary">
+                <h3 class="underline text-xl text-center">Soft skills</h3>
                 <ul class="px-8 mt-6">
-                    <li>* Empathie</li>
-                    <li>* Continuous learner</li>
-                    <li>* Créatif</li>
-                    <li>* Team player</li>
-                    <li>* Débrouillard</li>
+                    <li>Empathie</li>
+                    <li>Continuous learner</li>
+                    <li>Créatif</li>
+                    <li>Team player</li>
+                    <li>Débrouillard</li>
                 </ul>
             </div>
-            <div class="w-full sm:w-1/3">
-                <h3 class="underline text-xl">Compétances linguistiques</h3>
+            <div class="w-full sm:w-1/3 bg-white px-6 py-10 rounded-lg border-2 border-secondary">
+                <h3 class="underline text-xl text-center">Compétances linguistiques</h3>
                 <ul class="px-8 mt-6">
-                    <li>* Arabe : Parlé, lu, écrit.</li>
-                    <li>* Français : Parlé, lu, écrit.</li>
-                    <li>* Anglais : Parlé, lu, écrit.</li>
+                    <li>Arabe : Native.</li>
+                    <li>Français : Native.</li>
+                    <li>Anglais : Parlé, lu, écrit.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div id="git" class="getintouch mb-32">
+    <div id="git" class="getintouch mb-32 sm:mb-0">
         
         <h1 class="font-bold text-secondary text-3xl underline text-center mb-4 sm:mb-16">Contact</h1>
 
@@ -169,8 +185,8 @@
                 <p class="font-semibold text-2xl mb-6 mt-8 sm:mt-0">Mon profile vous intéresse ? Lets get in touch !</p>
 
                 <div class="sm:flex mx-auto w-full">
-                        <a href="mailto:mehdiibeldjoudi@gmail.com"> <button class="cursor-pointer mb-8 sm:mb-0 w-48 py-4 bg-secondary rounded-lg font-semibold mr-4">Email me</button> </a>
-                        <a href="/dist/cv.pdf" download> <button class="cursor-pointer w-48 py-4 bg-white rounded-lg font-semibold">Téléchargez mon cv</button> </a>
+                        <a href="mailto:mahdi.beldjoudi@esaa.dz"> <button class="cursor-pointer mb-8 sm:mb-0 w-48 py-4 bg-secondary rounded-lg font-semibold mr-4">Email me</button> </a>
+                        <a href="/dist/curriculum-c.pdf" download> <button class="cursor-pointer w-48 py-4 bg-white rounded-lg font-semibold">Téléchargez mon cv</button> </a>
                 </div>
             </div>
         </div>
